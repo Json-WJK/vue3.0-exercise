@@ -3,7 +3,7 @@
     <div class>{{ obj.text + ':' + count }}</div>
     <button @click="add">+1</button>
     <button @click="down">-1</button>
-    <div>computed: {{ plusOne }}</div>
+    <div class="segmentation">computed: {{ plusOne }}</div>
     <basiceComponent :count="count" @componentClick="componentClick" />
   </div>
 </template>
@@ -43,7 +43,7 @@ export default {
       console.log(e, "子组件传递给父组件的参数");
     };
 
-    // 生命周期
+    // 其他生命周期模块
     onMounted(() => {
       console.log("页面加载完成");
     });
@@ -66,4 +66,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
+.segmentation {
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
 </style>
