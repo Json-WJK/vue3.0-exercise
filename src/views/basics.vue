@@ -3,8 +3,11 @@
     <div class>{{ obj.text + ':' + count }}</div>
     <button @click="add">+1</button>
     <button @click="down">-1</button>
-    <div class="segmentation">computed: {{ plusOne }}</div>
+    <div>computed: {{ plusOne }}</div>
+    <div class="segmentation"></div>
     <basiceComponent :count="count" @componentClick="componentClick" />
+    <div class="segmentation"></div>
+    <readonlyComponent />
   </div>
 </template>
 
@@ -19,8 +22,10 @@ import {
   onUnmounted
 } from "vue";
 import basiceComponent from "@/components/basiceComponent";
+import readonlyComponent from "@/components/readonly";
+
 export default {
-  components: { basiceComponent },
+  components: { basiceComponent, readonlyComponent },
   setup() {
     // 加减模块
     const obj = reactive({
