@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>readonly练习</div>
+    <h2>readonly练习</h2>
     <div>我是原始数据：{{ obj.count }}</div>
     <div>我是代理数据：{{ copy.count }}</div>
     <button @click="add">点我增加原始数据</button>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>vue3.0基础使用练习</div>
+    <h2>vue3.0基础使用练习</h2>
     <div class>{{ obj.text + ':' + count }}</div>
     <button @click="add">+1</button>
     <button @click="down">-1</button>
