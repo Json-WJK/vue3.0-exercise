@@ -9,6 +9,8 @@
     <basiceComponent :count="count" @componentClick="componentClick" />
     <div class="segmentation"></div>
     <readonlyComponent />
+    <div class="segmentation"></div>
+    <watchEffect />
   </div>
 </template>
 
@@ -24,9 +26,10 @@ import {
 } from "vue";
 import basiceComponent from "@/components/basiceComponent";
 import readonlyComponent from "@/components/readonly";
+import watchEffect from "@/components/watchEffect";
 
 export default {
-  components: { basiceComponent, readonlyComponent },
+  components: { basiceComponent, readonlyComponent, watchEffect },
   setup() {
     // 加减模块
     const obj = reactive({
