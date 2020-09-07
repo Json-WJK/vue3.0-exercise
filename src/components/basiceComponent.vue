@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>组件使用方式练习</div>
     <div>我是basice子组件</div>
     <button @click="componentClick">点我给父组件传递参数</button>
     <div>子组件接收的参数count: {{ count }}</div>
