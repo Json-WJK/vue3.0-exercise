@@ -3,6 +3,7 @@
   <button @click="add">+1</button>
   <button @click="down">-1</button>
   <div>computed: {{ plusOne }}</div>
+  <basiceComponent :count="count" @componentClick="componentClick" />
 </template>
 
 <script>
@@ -15,9 +16,11 @@ import {
   onUpdated,
   onUnmounted
 } from "vue";
+import basiceComponent from "@/components/basiceComponent";
 export default {
+  components: { basiceComponent },
   setup() {
-    // 加减功能
+    // 加减模块
     const obj = reactive({
       text: "count值"
     });
@@ -32,6 +35,13 @@ export default {
     const down = () => {
       count.value -= 1;
     };
+
+    // basiceComponent 模块
+    const componentClick = e => {
+      console.log(e, "子组件传递给父组件的参数");
+    };
+
+    // 生命周期
     onMounted(() => {
       console.log("页面加载完成");
     });
@@ -46,7 +56,8 @@ export default {
       count,
       plusOne,
       add,
-      down
+      down,
+      componentClick
     };
   }
 };
