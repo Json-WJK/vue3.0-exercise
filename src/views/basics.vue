@@ -1,9 +1,11 @@
 <template>
-  <div class>{{ obj.text + ':' + count }}</div>
-  <button @click="add">+1</button>
-  <button @click="down">-1</button>
-  <div>computed: {{ plusOne }}</div>
-  <basiceComponent :count="count" @componentClick="componentClick" />
+  <div>
+    <div class>{{ obj.text + ':' + count }}</div>
+    <button @click="add">+1</button>
+    <button @click="down">-1</button>
+    <div>computed: {{ plusOne }}</div>
+    <basiceComponent :count="count" @componentClick="componentClick" />
+  </div>
 </template>
 
 <script>
