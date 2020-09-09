@@ -2,7 +2,7 @@
   <div>
     <h2>watchEffect练习</h2>
     <div>count：{{ count }}</div>
-    <button @click="add">点我count+1 查看监听是否触发</button>
+    <button @click="add">点我count+1查看监听是否触发</button>
   </div>
 </template>
 
@@ -27,4 +27,3 @@ export default {
 
 <style lang='less' scoped>
 </style>
-v

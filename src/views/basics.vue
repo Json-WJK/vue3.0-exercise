@@ -22,7 +22,8 @@ import {
   watch,
   onMounted,
   onUpdated,
-  onUnmounted
+  onUnmounted,
+  provide
 } from "vue";
 import basiceComponent from "@/components/basiceComponent";
 import readonlyComponent from "@/components/readonly";
@@ -51,6 +52,9 @@ export default {
     const componentClick = e => {
       console.log(e, "子组件传递给父组件的参数");
     };
+
+    // 依赖注入模块
+    provide("CountSymbol", count);
 
     // 其他生命周期模块
     onMounted(() => {
