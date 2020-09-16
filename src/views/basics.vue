@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="basics">
     <h2>vue3.0基础使用练习</h2>
     <div class>{{ obj.text + ':' + count }}</div>
     <button @click="add">+1</button>
@@ -79,10 +79,14 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.segmentation {
-  box-sizing: border-box;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
+.basics {
+  width: 100%;
+  text-align: center;
+  .segmentation {
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
 }
 </style>
